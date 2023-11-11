@@ -10,7 +10,6 @@ use Discord\WebSockets\Event;
 
 $result = Connect::getInstance()->query("select * from personal_access_tokens");
 
-dd($result->fetchAll(PDO::FETCH_ASSOC)[0]);
 $discord = new Discord([
     'token' => TOKEN,
     'intents' => Intents::getDefaultIntents()
