@@ -10,13 +10,13 @@ use Discord\WebSockets\Event;
 
 $result = Connect::getInstance()->query("select * from personal_access_tokens");
 
-$discord = new Discord([
+/*$discord = new Discord([
     'token' => TOKEN,
     'intents' => Intents::getDefaultIntents()
 //      | Intents::MESSAGE_CONTENT, // Note: MESSAGE_CONTENT is privileged, see https://dis.gd/mcfaq
 ]);
 
-/*$discord->on('ready', function (Discord $discord) use ($result) {
+$discord->on('ready', function (Discord $discord) use ($result) {
     echo "Bot is ready!", PHP_EOL;
 
     $channel = $discord->getChannel(CHANNEL_ID);

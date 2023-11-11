@@ -27,9 +27,10 @@ $discord->on('ready', function (Discord $discord){
 
     // Listen for messages.
     $discord->on(Event::MESSAGE_CREATE, function (Message $message, Discord $discord) {
-        if($message->author->bot) {
+        if($message->author->bot || ($message->channel_id != CHANNEL_ID)) {
            return;
         }
+
         $channel = $message->channel;
         $channel->sendMessage("Testando resposta no bot hospedado: {$message->author->username}");
         //$message->reply('Testando resposta no bot');
