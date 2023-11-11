@@ -28,7 +28,7 @@ $discord->on('ready', function (Discord $discord){
     // Listen for messages.
     $discord->on(Event::MESSAGE_CREATE, function (Message $message, Discord $discord) {
         if($message->author->bot || ($message->channel_id != CHANNEL_ID)) {
-           return;
+            return;
         }
 
         $channel = $message->channel;
