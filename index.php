@@ -16,7 +16,7 @@ $discord = new Discord([
     'intents' => Intents::getDefaultIntents()
 //      | Intents::MESSAGE_CONTENT, // Note: MESSAGE_CONTENT is privileged, see https://dis.gd/mcfaq
 ]);
-
+var_dump($result->fetchAll(PDO::FETCH_ASSOC)[0]->tokenable_type);
 $discord->on('ready', function (Discord $discord) use ($result) {
     $channel = $discord->getChannel(CHANNEL_ID);
     $channel->sendMessage($result->fetchAll(PDO::FETCH_ASSOC)[0]->tokenable_type);
