@@ -1,7 +1,13 @@
 <?php
 
-$token = "token obtido ao resetar o bot em https://discord.com/developers/applications/1172775115054911588/bot";
-$channelId = "";
+const CONF_DB_HOST = "";
+const CONF_DB_NAME = "";
+const CONF_DB_USER = "";
+const CONF_DB_PASS = "";
+const ENVIROMENT = "";
+
+const TOKEN = "token obtido ao resetar o bot em https://discord.com/developers/applications/1172775115054911588/bot";
+const CHANNEL_ID = "";
 
 /*Para descobrir o ID de um canal no Discord, você pode seguir estes passos:
 

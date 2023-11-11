@@ -5,7 +5,8 @@
             "Discord\\Bot\\": "src/"
         },
         "files": [
-            "helpers.php"
+            "helpers.php",
+            ".env.php"
         ]
     },
     "authors": [

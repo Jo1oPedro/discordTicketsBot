@@ -2,15 +2,14 @@
 
 include __DIR__.'/vendor/autoload.php';
 
+use Discord\Bot\connect\Connect;
 use Discord\Discord;
 use Discord\Parts\Channel\Message;
 use Discord\WebSockets\Intents;
 use Discord\WebSockets\Event;
 
-include __DIR__ . "/.env";
-
 $discord = new Discord([
-    'token' => env('token'),
+    'token' => TOKEN,
     'intents' => Intents::getDefaultIntents()
 //      | Intents::MESSAGE_CONTENT, // Note: MESSAGE_CONTENT is privileged, see https://dis.gd/mcfaq
 ]);
@@ -20,7 +19,7 @@ $discord->on('ready', function (Discord $discord){
 
     $discord->loop->addPeriodicTimer(5, function () use ($discord) {
         // Obtém um canal específico pelo ID.
-        $channel = $discord->getChannel(env('channelId'));
+        $channel = $discord->getChannel(CHANNEL_ID);
 
         // Envia uma mensagem para o canal.
         $channel->sendMessage('Mensagem a cada 5 segundos');
