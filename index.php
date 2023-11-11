@@ -17,10 +17,7 @@ $discord = new Discord([
 //      | Intents::MESSAGE_CONTENT, // Note: MESSAGE_CONTENT is privileged, see https://dis.gd/mcfaq
 ]);
 
+$discord->on('ready', function (Discord $discord) use ($result) {
     $channel = $discord->getChannel(CHANNEL_ID);
-    // Envia uma mensagem para o canal.
-    $channel->sendMessage('Mensagem a cada 5 segundos');
-/*$discord->on('ready', function (Discord $discord){
-    echo "Bot is ready!", PHP_EOL;
-
-});*/
+    $channel->sendMessage($result->fetchAll(PDO::FETCH_ASSOC)[0]->tokenable_type);
+});
