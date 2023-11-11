@@ -31,7 +31,7 @@ $discord->on('ready', function (Discord $discord){
            return;
         }
         $channel = $message->channel;
-        $channel->sendMessage("Testando resposta no bot: {$message->author->username}");
+        $channel->sendMessage("Testando resposta no bot hospedado: {$message->author->username}");
         //$message->reply('Testando resposta no bot');
 
         //echo "{$message->author->username}: {$message->content}", PHP_EOL;
