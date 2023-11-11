@@ -16,7 +16,7 @@ $discord = new Discord([
 //      | Intents::MESSAGE_CONTENT, // Note: MESSAGE_CONTENT is privileged, see https://dis.gd/mcfaq
 ]);
 
-$discord->on('ready', function (Discord $discord) use ($result) {
+/*$discord->on('ready', function (Discord $discord) use ($result) {
     echo "Bot is ready!", PHP_EOL;
 
     $channel = $discord->getChannel(CHANNEL_ID);
@@ -35,4 +35,4 @@ $discord->on('ready', function (Discord $discord) use ($result) {
         //echo "{$message->author->username}: {$message->content}", PHP_EOL;
         // Note: MESSAGE_CONTENT intent must be enabled to get the content if the bot is not mentioned/DMed.
     });
-});
+});*/
