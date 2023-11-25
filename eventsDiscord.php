@@ -35,6 +35,10 @@ $discord->on('ready', function (Discord $discord){
         $channel->sendMessage("Testando resposta no bot hospedado: {$message->author->username}");
         //$message->reply('Testando resposta no bot');
 
+        if($message->content == "cascata") {
+            $channel->sendMessage("Testando resposta no bot hospedado234: {$message->author->username}");
+        }
+
         //echo "{$message->author->username}: {$message->content}", PHP_EOL;
         // Note: MESSAGE_CONTENT intent must be enabled to get the content if the bot is not mentioned/DMed.
     });
