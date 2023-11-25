@@ -32,7 +32,7 @@ $discord->on('ready', function (Discord $discord){
         }
 
         $channel = $message->channel;
-        $channel->sendMessage("Testando resposta no bot hospedado: {$message->author->username}");
+        //$channel->sendMessage("Testando resposta no bot hospedado: {$message->author->username}");
         //$message->reply('Testando resposta no bot');
 
         if($message->content == "cascata") {
